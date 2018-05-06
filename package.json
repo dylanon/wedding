@@ -18,9 +18,9 @@
   },
   "scripts": {
     "build":
-      "cp -r src/assets build/assets && webpack --config webpack.config.prod.js",
+      "rm -rf build && mkdir build && cp -R src/assets build/assets && webpack --config webpack.config.prod.js",
     "preview":
-      "cp -r src/assets build/assets && webpack-dev-server --open --config webpack.config.prod.js",
+      "rm -rf build && mkdir build && cp -R src/assets build/assets && webpack-dev-server --open --config webpack.config.prod.js",
     "start": "webpack-dev-server --open --config webpack.config.dev.js"
   }
 }
