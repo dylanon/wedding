@@ -8,6 +8,12 @@ const autoprefixer = require('autoprefixer');
 module.exports = merge(shared, {
   mode: 'production',
   devtool: 'source-map',
+  devServer: {
+    // Less messages in the browser console
+    clientLogLevel: 'warning',
+    contentBase: './build'
+    // useLocalIp: true
+  },
   optimization: {
     minimize: true
   },

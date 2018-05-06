@@ -1,5 +1,23 @@
-body {
-  background: forestgreen;
-  margin: 0;
-  padding: 0;
-}
+$font-size: 1.6rem;
+$font-stack: 'Josefin Sans', sans-serif;
+$base-spacing: 1.6rem;
+$border-radius: 20px;
+$color-bg: rgb(34, 44, 51);
+$color-text: rgb(0, 0, 0);
+$color-text-light: rgb(255, 255, 255);
+$color-pop: rgb(232, 53, 49);
+$color-pastel: rgb(232, 150, 153);
+$color-muted: rgb(119, 128, 42);
+$color-shade: rgb(25, 28, 15);
+$color-venue-image-gradient: rgba(0, 0, 0, 0.4);
+
+@import './partials/setup/normalize';
+@import './partials/setup/border-box';
+@import './partials/setup/sr-only';
+@import './partials/globals';
+@import './partials/typography';
+@import './partials/header';
+@import './partials/section';
+@import './partials/sections/intro';
+@import './partials/sections/venue';
+@import './partials/footer';

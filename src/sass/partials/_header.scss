@@ -1,0 +1,15 @@
+.header {
+  min-height: 100vh;
+  padding: $base-spacing;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__logo {
+    width: 325px;
+    max-width: 100%;
+    filter: invert(100%);
+    // fill: $color-text;
+  }
+}
