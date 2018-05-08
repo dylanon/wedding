@@ -1,0 +1,65 @@
+.rsvp {
+  background: $color-bg;
+  color: $color-text-light;
+  text-align: center;
+
+  &__feature-text {
+    @extend .feature-text;
+  }
+
+  &__deadline {
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      background: $color-text-light;
+      height: 0.2rem;
+      position: absolute;
+      bottom: -0.4rem;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &__buttons {
+    margin: $base-spacing * 2 0;
+  }
+
+  &__button {
+    background: transparent;
+    border: 0.2rem solid $color-text-light;
+    border-radius: $border-radius;
+    color: $color-text-light;
+    display: inline-block;
+    margin: 1em;
+    padding: 1em;
+    text: {
+      decoration: none;
+      transform: uppercase;
+    }
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    &:hover,
+    &:focus {
+      transform: translateY(-2px);
+      background: $color-pop;
+      border-color: $color-pop;
+      color: $color-text-light;
+    }
+  }
+
+  &__email {
+    font-size: $font-size * 1.5;
+    margin: 1em 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__copy:hover {
+    cursor: pointer;
+  }
+
+  &__copy-icon {
+    margin: 0 0 0 0.2em;
+  }
+}
