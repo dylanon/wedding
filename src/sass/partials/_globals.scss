@@ -5,6 +5,15 @@ body {
   padding: 0;
 }
 
+a {
+  color: inherit;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .image {
   &--responsive {
     max-width: 100%;

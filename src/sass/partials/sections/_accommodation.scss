@@ -1,0 +1,20 @@
+.accommodation {
+  background: $color-muted;
+  color: $color-text-light;
+
+  &__content {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  &__feature-text {
+    @extend .feature-text;
+    flex: 1;
+  }
+
+  &__hotel-photo {
+    border-radius: $border-radius;
+    margin: 0 0 0 $base-spacing * 2;
+  }
+}
