@@ -1,15 +1,27 @@
 .header {
+  color: $color-text-light;
   min-height: 100vh;
   padding: $base-spacing;
   display: flex;
-  justify-content: center;
+  flex-flow: column nowrap;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
+  position: relative;
 
   &__logo {
     width: 325px;
+    margin: auto;
     max-width: 100%;
     filter: invert(100%);
-    // fill: $color-text;
+  }
+
+  &__skip-to-main {
+    opacity: 0.8;
+    font-size: 2.4rem;
+    position: absolute;
+    bottom: 1.6rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

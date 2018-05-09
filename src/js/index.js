@@ -8,7 +8,18 @@ const copyRsvpEmail = () => {
   copyMessage.textContent = 'Copied!';
 };
 
+const getYPositionOfMainContent = () => {
+  const main = document.querySelector('.main');
+  const y = main.getBoundingClientRect().top + window.pageYOffset;
+  return y;
+};
+
 const events = () => {
+  // Listen for click to scroll to main content
+  const skipIcon = document.querySelector('.header__skip-to-main');
+  skipIcon.addEventListener('click', () =>
+    window.scrollTo(0, getYPositionOfMainContent())
+  );
   // Listen for click to copy email address
   const rsvpEmail = document.querySelector('.rsvp__email');
   rsvpEmail.addEventListener('click', copyRsvpEmail);
