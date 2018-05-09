@@ -1,5 +1,6 @@
 $font-size: 1.6rem;
 $font-stack: 'Josefin Sans', sans-serif;
+$font-stack-cursive: 'Great Vibes', cursive;
 $base-spacing: 1.6rem;
 $border-radius: 20px;
 $color-bg: rgb(34, 44, 51);
@@ -19,6 +20,7 @@ $color-venue-image-gradient: rgba(0, 0, 0, 0.4);
 @import './partials/header';
 @import './partials/section';
 @import './partials/sections/intro';
+@import './partials/sections/date';
 @import './partials/sections/venue';
 @import './partials/sections/rsvp';
 @import './partials/footer';

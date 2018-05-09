@@ -1,0 +1,26 @@
+.date {
+  color: $color-text-light;
+  font: {
+    // family: 'Pinyon Script', cursive;
+    family: $font-stack-cursive;
+    size: 4.8rem;
+  }
+  padding-top: $base-spacing * 1.8;
+  padding-bottom: $base-spacing * 1.4;
+  text-align: center;
+
+  &__time {
+    position: relative;
+  }
+
+  &__time::after {
+    background: $color-text-light;
+    content: '';
+    display: block;
+    height: 0.2rem;
+    position: absolute;
+    bottom: 0.2em;
+    left: -0.2em;
+    right: -0.2em;
+  }
+}
