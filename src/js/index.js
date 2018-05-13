@@ -16,10 +16,14 @@ const getYPositionOfMainContent = () => {
 
 const events = () => {
   // Listen for click to scroll to main content
+  const headerLogo = document.querySelector('.header__logo');
   const skipIcon = document.querySelector('.header__skip-to-main');
-  skipIcon.addEventListener('click', () =>
-    window.scrollTo(0, getYPositionOfMainContent())
-  );
+  const skipElements = [headerLogo, skipIcon];
+  skipElements.forEach(element => {
+    element.addEventListener('click', () =>
+      window.scrollTo(0, getYPositionOfMainContent())
+    );
+  });
   // Listen for click to copy email address
   const rsvpEmail = document.querySelector('.rsvp__email');
   rsvpEmail.addEventListener('click', copyRsvpEmail);

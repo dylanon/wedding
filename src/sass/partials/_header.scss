@@ -1,4 +1,5 @@
 .header {
+  background: url('../assets/flowers.png') center/60% no-repeat;
   color: $color-text-light;
   min-height: 100vh;
   padding: $base-spacing;
@@ -13,7 +14,7 @@
     width: 325px;
     margin: auto;
     max-width: 100%;
-    filter: invert(100%);
+    filter: invert(100%) drop-shadow(1px 1px 2px $color-bg);
   }
 
   &__skip-to-main {

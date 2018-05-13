@@ -17,8 +17,8 @@ module.exports = merge(shared, {
     hot: true,
     // Hide Webpack output (except for errors/warnings)
     noInfo: false,
-    port: 3000
-    // useLocalIp: true
+    port: 3000,
+    useLocalIp: true
   },
   module: {
     rules: [
