@@ -5,16 +5,27 @@
   &__content {
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
+    align-items: flex-start;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__feature-text {
     @extend .feature-text;
     flex: 1;
+    @media (max-width: 1000px) {
+      order: 1;
+    }
   }
 
   &__hotel-photo {
     border-radius: $border-radius;
-    margin: 0 0 0 $base-spacing * 2;
+    margin: 0 0 ($base-spacing * 4) ($base-spacing * 2);
+    @media (max-width: 1000px) {
+      margin-left: 0;
+    }
   }
 }
