@@ -1,4 +1,5 @@
 import '../sass/style.scss';
+import smoothScroll from 'smooth-scroll/dist/smooth-scroll.polyfills';
 
 const copyRsvpEmail = () => {
   const email = document.querySelector('.rsvp__email');
@@ -15,14 +16,21 @@ const getYPositionOfMainContent = () => {
 };
 
 const events = () => {
+  // // Initialize smooth scrolling for anchors
+  // const scroll = new smoothScroll('a[href*="#"]');
   // Listen for click to scroll to main content
   const headerLogo = document.querySelector('.header__logo');
   const skipIcon = document.querySelector('.header__skip-to-main');
   const skipElements = [headerLogo, skipIcon];
+  const scrollToIntro = new smoothScroll();
+  const yPosition = getYPositionOfMainContent();
   skipElements.forEach(element => {
-    element.addEventListener('click', () =>
-      window.scrollTo(0, getYPositionOfMainContent())
-    );
+    element.addEventListener('click', () => {
+      scrollToIntro.animateScroll(yPosition, undefined, {
+        speed: 800,
+        easing: 'easeOutQuint'
+      });
+    });
   });
   // Listen for click to copy email address
   const rsvpEmail = document.querySelector('.rsvp__email');
