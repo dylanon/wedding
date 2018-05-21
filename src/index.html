@@ -18,9 +18,31 @@
     <div class="header__skip-to-main">
       <i title="Skip to main content" class="fas fa-chevron-down"></i>
     </div>
+    <div class="header__menu-button">
+      <i title="Open menu" class="fas fa-bars"></i>
+    </div>
+    <nav class="menu">
+      <div class="menu__close-control">
+        <i title="Close menu" class="fas fa-times"></i>
+      </div>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#intro" class="menu__link">About</a>
+        </li>
+        <li class="menu__item">
+          <a href="#venue" class="menu__link">Venue</a>
+        </li>
+        <li class="menu__item">
+          <a href="#rsvp" class="menu__link">RSVP</a>
+        </li>
+        <li class="menu__item">
+          <a href="#accommodation" class="menu__link">Accommodation</a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <main class="main">
-    <section class="section intro">
+    <section id="intro" class="section intro">
       <div class="section__container">
         <h2 class="section__title">We're getting married.</h2>
         <div class="intro__content">
@@ -34,23 +56,23 @@
               <em>each other</em>.
             </p>
             <p>
-              While we don&apos;t perform anymore, we&apos;ve found a harmony in our life together that we&apos;re grateful to share each
-              and every day. We can&apos;t wait for you to join us on our wedding day as we celebrate our love for each other
-              and look forward to a lifetime of joy, laughter, coffee, and dogs!
+              While we don&apos;t perform as much anymore, we&apos;ve found a harmony in our life together that we&apos;re grateful to
+              share each and every day. We can&apos;t wait for you to join us on our wedding day as we celebrate our love
+              for each other and look forward to a lifetime of joy, laughter, coffee, and dogs!
             </p>
             <p>— Dylan &amp; Cody</p>
           </div>
         </div>
       </div>
     </section>
-    <section class="section date">
+    <section id="date" class="section date">
       <div class="section__container">
         <p>Saturday September 15, 2018 at
           <span class="date__time">four o&apos;clock in the afternoon</span>
         </p>
       </div>
     </section>
-    <section class="section venue">
+    <section id="venue" class="section venue">
       <div class="section__container">
         <h2 class="section__title">The venue.</h2>
         <div class="venue__content">
@@ -74,7 +96,7 @@
     </section>
     <iframe class="map" width="100%" height="525" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=8007%20Centennial%20Road%20St.%20Thomas%2C%20Ontario&key=AIzaSyDCnkki4B1PAo8ZmEpCAUkz80U1od-llPc&zoom=12"
       allowfullscreen></iframe>
-    <section class="section rsvp">
+    <section id="rsvp" class="section rsvp">
       <div class="section__container">
         <h3 class="section__title">RSVP.</h3>
         <div class="rsvp__feature-text">
@@ -98,7 +120,7 @@
         </p>
       </div>
     </section>
-    <section class="section accommodation">
+    <section id="accommodation" class="section accommodation">
       <div class="section__container">
         <h2 class="section__title">Accommodation.</h2>
         <div class="accommodation__content">

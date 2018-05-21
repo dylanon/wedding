@@ -35,4 +35,16 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+  &__menu-button {
+    font-size: 2.4rem;
+    padding: 1.6rem;
+    position: absolute;
+    right: 4rem;
+    top: 1.6rem;
+    opacity: 0.8;
+    @media (max-width: 675px) {
+      right: 2.4rem;
+    }
+  }
 }
