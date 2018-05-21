@@ -31,4 +31,15 @@
       text-align: center;
     }
   }
+
+  &__drop-cap:first-letter {
+    font-size: 3em;
+    float: left;
+    line-height: 0.7;
+    @media (max-width: 950px) {
+      font-size: 2em;
+      line-height: initial;
+      float: none;
+    }
+  }
 }
