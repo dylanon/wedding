@@ -22,15 +22,26 @@ const events = () => {
   const headerLogo = document.querySelector('.header__logo');
   const skipIcon = document.querySelector('.header__skip-to-main');
   const skipElements = [headerLogo, skipIcon];
-  const scrollToIntro = new smoothScroll();
+  const htmlElement = document.querySelector('html');
   const yPosition = getYPositionOfMainContent();
-  skipElements.forEach(element => {
-    element.addEventListener('click', () => {
-      scrollToIntro.animateScroll(yPosition, undefined, {
+  let scrollToIntro;
+  if ('scrollBehavior' in htmlElement.style) {
+    scrollToIntro = () => {
+      console.log('Performed native smooth scroll.');
+      window.scrollTo(0, yPosition);
+    };
+  } else {
+    scrollToIntro = () => {
+      console.log('Falling back to scroll-smooth library.');
+      const scroll = new smoothScroll();
+      scroll.animateScroll(yPosition, undefined, {
         speed: 800,
         easing: 'easeOutQuint'
       });
-    });
+    };
+  }
+  skipElements.forEach(element => {
+    element.addEventListener('click', scrollToIntro);
   });
   // Listen for click to copy email address
   const rsvpEmail = document.querySelector('.rsvp__email');
