@@ -26,7 +26,6 @@
   &__registry {
     background: #ffffff;
     color: $color-text;
-    font-size: 1.2em;
     margin: 0 0 $base-spacing 0;
     width: 48%;
     border: 1px solid rgba(255, 255, 255, 0.8);
@@ -34,6 +33,7 @@
     padding: 2em;
 
     p {
+      font-size: 1.2em;
       margin: 1em 0;
     }
 
