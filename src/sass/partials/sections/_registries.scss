@@ -1,0 +1,93 @@
+.registries {
+  color: #ffffff;
+  padding-bottom: $base-spacing * 2.5;
+
+  @media (max-width: 650px) {
+    padding-bottom: 0;
+  }
+
+  &__feature-text {
+    @extend .feature-text;
+    text-align: center;
+    margin-bottom: $base-spacing * 4;
+  }
+
+  &__info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 900px) {
+      flex-flow: column;
+    }
+  }
+
+  &__registry {
+    background: #ffffff;
+    color: $color-text;
+    font-size: 1.2em;
+    margin: 0 0 $base-spacing 0;
+    width: 48%;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: $border-radius;
+    padding: 2em;
+
+    p {
+      margin: 1em 0;
+    }
+
+    @media (max-width: 900px) {
+      width: 80%;
+    }
+
+    @media (max-width: 650px) {
+      border-radius: 0;
+      margin-left: -$base-spacing;
+      margin-right: -$base-spacing;
+      margin-bottom: 0;
+      width: calc(100% + 64px);
+    }
+  }
+
+  &__store-image {
+    margin-bottom: 1.6rem;
+    border-radius: $border-radius;
+  }
+
+  &__buttons {
+    text-align: center;
+  }
+
+  &__button {
+    background: transparent;
+    border: 0.2rem solid currentColor;
+    border-radius: $border-radius;
+    color: $color-muted;
+    display: inline-block;
+    margin: 1em 1em 0;
+    padding: 1em 1em 0.9em;
+    text: {
+      decoration: none;
+      transform: uppercase;
+    }
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    &:hover,
+    &:focus {
+      transform: translateY(-2px);
+      background: $color-muted;
+      color: $color-text-light;
+    }
+  }
+
+  &__button--faq {
+    border-color: currentColor;
+    color: $color-primary;
+    &:hover,
+    &:focus {
+      background: $color-primary;
+      border-color: $color-primary;
+      color: $color-text-light;
+    }
+  }
+}
