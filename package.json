@@ -20,8 +20,10 @@
     "webpack-merge": "^4.1.2"
   },
   "scripts": {
-    "build": "rm -rf build && mkdir build && cp -R src/assets build/assets && webpack --config webpack.config.prod.js",
-    "preview": "rm -rf build && mkdir build && cp -R src/assets build/assets && webpack-dev-server --open --config webpack.config.prod.js",
+    "build":
+      "rm -rf build && mkdir build && cp -R src/assets build/assets && cp favicon.ico build && webpack --config webpack.config.prod.js",
+    "preview":
+      "rm -rf build && mkdir build && cp -R src/assets build/assets && webpack-dev-server --open --config webpack.config.prod.js",
     "start": "webpack-dev-server --open --config webpack.config.dev.js"
   },
   "dependencies": {
