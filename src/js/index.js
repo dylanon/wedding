@@ -81,7 +81,7 @@ const initSmoothScrolling = () => {
 };
 
 // Initialize JavaScript when all resources have been loaded
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   events();
   initSmoothScrolling();
 });
