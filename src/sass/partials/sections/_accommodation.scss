@@ -28,4 +28,17 @@
       margin-left: 0;
     }
   }
+
+  &__shuttle-schedule {
+    padding-left: 1.5em;
+  }
+
+  &__shuttle-schedule-item {
+    padding-left: 0.5em;
+    margin: 0.5em 0;
+    text-align: left;
+    strong {
+      font-weight: 400;
+    }
+  }
 }
